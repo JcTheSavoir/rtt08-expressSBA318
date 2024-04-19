@@ -18,21 +18,21 @@ This project is used to measures a learners understanding of Node and Express, a
  --- Weight: 5%
 * Create and use error-handling middleware.
  --- Weight: 5%
-* Use at least three different data categories (e.g., users, posts, or comments). !!
+* /Use at least three different data categories (e.g., users, posts, or comments). !!
  --- Weight: 5%
-* Utilize reasonable data structuring practices.
+* /Utilize reasonable data structuring practices.
  --- Weight: 5%
-* Create GET routes for all data that should be exposed to the client.
+* /Create GET routes for all data that should be exposed to the client.
  --- Weight: 5%
-* Create POST routes for data, as appropriate. At least one data category should allow for client creation via a POST request.
+* /Create POST routes for data, as appropriate. At least one data category should allow for client creation via a POST request.
  --- Weight: 5%
-* Create PATCH or PUT routes for data, as appropriate. At least one data category should allow for client manipulation via a PATCH or PUT request.
+* /Create PATCH or PUT routes for data, as appropriate. At least one data category should allow for client manipulation via a PATCH or PUT request.
  --- Weight: 5%
-* Create DELETE routes for data, as appropriate. At least one data category should allow for client deletion via a DELETE request.
+* /Create DELETE routes for data, as appropriate. At least one data category should allow for client deletion via a DELETE request.
  --- Weight: 5%
-* Utilize route parameters, where appropriate.
+* /Utilize route parameters, where appropriate.
  --- Weight: 5%
-* Adhere to the guiding principles of REST.
+* /Adhere to the guiding principles of REST.
  --- Weight: 10%
 * Create and render at least one view using a view template and template engine. This can be a custom template engine or a third-party engine.
 Note: If you are stuck on how to approach this, think about ways you could render the current state of your API's data for easy viewing.
@@ -41,15 +41,15 @@ Note: If you are stuck on how to approach this, think about ways you could rende
 Note: This is not a test of design; it is a test of serving static files using Express. The CSS can be
 very simple.
  --- Weight: 2%
-* Utilize reasonable code organization practices.
+* /Utilize reasonable code organization practices.
  --- Weight: 5%
-* Ensure that the program runs without errors (comment out things that do not work, and explain your blockers - you can still receive partial credit).
+* /Ensure that the program runs without errors (comment out things that do not work, and explain your blockers - you can still receive partial credit).
  --- Weight: 10%
-* Commit frequently to the git repository.
+* /Commit frequently to the git repository.
  --- Weight: 5%
-* Include a README file that contains a description of your application.
+* /Include a README file that contains a description of your application.
  --- Weight: 2%
-* Level of effort displayed in creativity, presentation, and user experience.
+* /Level of effort displayed in creativity, presentation, and user experience.
  --- Weight: 5%
 
 //--------------Bonus Requirements {not required}-------------//

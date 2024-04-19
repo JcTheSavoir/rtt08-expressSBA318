@@ -5,12 +5,20 @@ const app = express();
 //set port variable for use in localserver:
 const port = "3000";
 
+//--------------{body-parser middleware}-----------------
 const bodyParser = require("body-parser");
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({ extended: true }));
 
 
-//--------------{middleware}-----------------
+//-----------------{view template engine}
+
+
+    //------------------{express.static}------------------
+      //Sets the public directory to be the root directory, gives static files to use 
+      //inside of express (We are using it mainly for it's ability to add css into our view section
+    app.use(express.static('public'));
+
     //-----------------{error handling Middleware}------------------
 
     //--------------------------------------{Other Middleware}----------
@@ -36,6 +44,11 @@ app.use((req, res, next) => {
       console.log(`${JSON.stringify(req.body)}`);
     }
     next();
+});
+//------------------------{ROUTES}------------------
+
+app.get('/', (req, res) => {
+  res.send('This is the homepage');
 });
 
 // add route for forceOfWill database
