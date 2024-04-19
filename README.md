@@ -18,7 +18,7 @@ This project is used to measures a learners understanding of Node and Express, a
  --- Weight: 5%
 * Create and use error-handling middleware.
  --- Weight: 5%
-* Use at least three different data categories (e.g., users, posts, or comments).
+* Use at least three different data categories (e.g., users, posts, or comments). !!
  --- Weight: 5%
 * Utilize reasonable data structuring practices.
  --- Weight: 5%
@@ -62,6 +62,6 @@ Note: Using API keys is dissallowed
 Note: A forced, arbitrary usage of this technique will not earn you any bonus credit. This must be
 practical and sensible in order to be considered for credit.
  --- Weight: +1%
-* Research and eff ectively use at least one third-party Node package for practical, sensible purposes.
+* Research and effectively use at least one third-party Node package for practical, sensible purposes.
 This cannot be a package that has been used in examples and lesson materials thus far. Step outside the box and be creative!
  --- Weight: +1%

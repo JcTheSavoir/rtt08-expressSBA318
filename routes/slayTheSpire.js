@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const desserts = require("../data/slayTheSpire");
+const slayTheSpireCards = require("../data/slayTheSpire");
 
 
 module.exports = router;
