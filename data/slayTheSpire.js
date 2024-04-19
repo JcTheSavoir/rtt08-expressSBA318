@@ -13,7 +13,7 @@ const slayTheSpireCards = [
         name: "Bloodletting",
         type: "Skill",
         subType: "HP/Energy",
-        url: "https://static.wikia.nocookie.net/slay-the-spire/images/f/ff/Bloodletting.png/",
+        url: "https://static.wikia.nocookie.net/slay-the-spire/images/f/ff/Bloodletting.png",
         cardGame: "Slay The Spire",
     },
     {
@@ -21,7 +21,7 @@ const slayTheSpireCards = [
         name: "Brutality",
         type: "Power",
         subType: "HP/Draw",
-        url: "https://static.wikia.nocookie.net/slay-the-spire/images/b/ba/Brutality.png/",
+        url: "https://static.wikia.nocookie.net/slay-the-spire/images/b/ba/Brutality.png",
         cardGame: "Slay The Spire",
     },
     {

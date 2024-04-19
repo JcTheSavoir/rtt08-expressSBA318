@@ -5,7 +5,7 @@ const forceOfWillCards = [
         name: "Milest",
         type: "Ruler",
         subType: "Human, Six Sages",
-        url: "https://www.fowdb.altervista.org/images/cards/8/msw/026.jpg?20191111-4",
+        url: "https://www.fowdb.altervista.org/images/cards/8/msw/026.jpg",
         cardGame: "Force Of Will",
     },
     {
@@ -13,7 +13,7 @@ const forceOfWillCards = [
         name: "Atomic Bahamut",
         type: "Resonator",
         subType: "Dragon",
-        url: "https://www.fowdb.altervista.org/images/cards/8/adw/016.jpg?20191111-4",
+        url: "https://www.fowdb.altervista.org/images/cards/8/adw/016.jpg",
         cardGame: "Force Of Will",
     },
     {
@@ -21,7 +21,7 @@ const forceOfWillCards = [
         name: "Blood Bolt",
         type: "Spell",
         subType: "Chant-Instant",
-        url: "https://www.fowdb.altervista.org/images/cards/3/bfa/018.jpg?20191111-4",
+        url: "https://www.fowdb.altervista.org/images/cards/3/bfa/018.jpg",
         cardGame: "Force Of Will",
     },
     {
@@ -29,7 +29,7 @@ const forceOfWillCards = [
         name: "Certo, the Blazing Volcano",
         type: "Addition",
         subType: "Field",
-        url: "https://www.fowdb.altervista.org/images/cards/4/vin003/022.jpg?20191111-4",
+        url: "https://www.fowdb.altervista.org/images/cards/4/vin003/022.jpg",
         cardGame: "Force Of Will",
     },
     {
@@ -37,7 +37,7 @@ const forceOfWillCards = [
         name: "Magic Stone of Atoms",
         type: "Magic Stone",
         subType: "Special/Fire",
-        url: "https://www.fowdb.altervista.org/images/cards/8/adw/096.jpg?20191111-4",
+        url: "https://www.fowdb.altervista.org/images/cards/8/adw/096.jpg",
         cardGame: "Force Of Will",
     },
 ]

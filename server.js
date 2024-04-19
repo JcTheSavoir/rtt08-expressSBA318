@@ -38,10 +38,17 @@ app.use((req, res, next) => {
     next();
 });
 
+// add route for forceOfWill database
+const forceOfWillRoute = require("./routes/forceOfWill");
+app.use('/api/fowcards', forceOfWillRoute)
+
+// add route for slayTheSpire database
+const slayTheSpireRoute = require("./routes/slayTheSpire");
+app.use('/api/stscards', slayTheSpireRoute)
+
 // add route for yugioh database
 const yugiohRoute = require("./routes/yugioh");
 app.use('/api/yugiohcards', yugiohRoute)
-
 
 //Start server and listen on port variable for changes
 app.listen(port, (req, res) => {

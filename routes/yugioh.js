@@ -58,7 +58,7 @@ router
         const yugiohCard = yugiohCards.find((u, i) => {
             if (u.id == req.params.id) {
                 for (const key in req.body) {
-                    yugiohCard[i][key] = req.body[key];
+                    yugiohCards[i][key] = req.body[key];
                 }
                 return true;
             }
