@@ -9,7 +9,7 @@ const imageValidation = (url) => {
 
 //Creating route for all Slay The Spire Cards
 router
-    .route("/")
+    .route("/api")
     .get((req, res) => {
         res.json(slayTheSpireCards)
     })
@@ -17,13 +17,11 @@ router
     .post((req, res) => {
         if(req.body.name && req.body.type && req.body.subType && req.body.url && req.body.cardGame) {
             //error if someone tries to add a non Slay The Spire card
-
             if(req.body.cardGame !== "Slay The Spire") {
                 res.json({ error: "Trying to add non Slay The Spire Card"});
                 return;
             };
             //add error handling for if the url added is an image
-
             if(imageValidation(req.body.url) === false) {
                 res.json({ error: "Trying to add non image URL"});
                 return;
@@ -43,7 +41,7 @@ router
 
 // Creating a route for individual cards
 router
-    .route('/:id')
+    .route('/api/:id')
     .get((req, res, next) => {
         const slayTheSpireCard = slayTheSpireCards.find((u) => u.id == req.params.id);
         if (slayTheSpireCard) res.json(slayTheSpireCard);
@@ -70,6 +68,22 @@ router
         });
         if(slayTheSpireCard) res.json(slayTheSpireCard)
         else next(); 
+});
+
+//---------{VIEW ROUTES}
+router
+    .route('/views')
+    .get((req, res) => {
+    res.render('SlayTheSpire', {slayTheSpireCards: slayTheSpireCards});
+});
+router
+    .route('/views/:id')
+    .get((req, res, next) => {
+  const slayTheSpireCard = slayTheSpireCards.find((u) => u.id == req.params.id);
+  if (slayTheSpireCard) res.render("EachSTS", {
+      slayTheSpireCard: slayTheSpireCard
+    })
+  else next();
 });
 
 module.exports = router;

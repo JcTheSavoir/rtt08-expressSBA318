@@ -47,43 +47,18 @@ app.use((req, res, next) => {
     next();
 });
 
-
-
-//----------------------------------------{VIEWS}-------------------
-  //----------------{REQUIRE FOR VIEWS}
-const forceOfWillCards = require("./data/forceOfWill");
-const slayTheSpireCards = require("./data/slayTheSpire");
-const yugiohCards = require("./data/yugioh");
-// //---{HOMEPAGE}
-// app.get('/', (req, res) => {
-//   res.render('Homepage');
-// });
-// //---{FORCEOFWILL}
-// app.get('/fowcards', (req, res) => {
-//   res.render('ForceOfWill', {forceOfWillCards: forceOfWillCards});
-// });
-// //---{SLAYTHESPIRE}
-// app.get('/stscards', (req, res) => {
-//   res.render('SlayTheSpire', {slayTheSpireCards: slayTheSpireCards});
-// });
-//--{YUGIOH} 
-app.get('/yugiohcards', (req, res) => {
-  res.render('Yugioh', {yugiohCards: yugiohCards});
-});
-
-
 //------------------------------------------{ROUTES}-------------------
-//-------{REQUIRE FOR ROUTES}-----------------
+    //-------{REQUIRE FOR ROUTES}-----------------
 const forceOfWillRoute = require("./routes/forceOfWill");
 const slayTheSpireRoute = require("./routes/slayTheSpire");
 const yugiohRoute = require("./routes/yugioh");
-  //--------------------------------------{api routes}-----------------
+    //--------------------------------------{routes}-----------------
 //---{FORCEOFWILL}
-app.use('/api/fowcards', forceOfWillRoute)
+app.use('/fowcards', forceOfWillRoute)
 //---{SLAYTHESPIRE}
-app.use('/api/stscards', slayTheSpireRoute)
+app.use('/stscards', slayTheSpireRoute)
 //---{YUGIOH}
-app.use('/api/yugiohcards', yugiohRoute)
+app.use('/yugiohcards', yugiohRoute)
 
 //Start server and listen on port variable for changes
 app.listen(port, (req, res) => {

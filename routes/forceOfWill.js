@@ -9,7 +9,7 @@ const imageValidation = (url) => {
 
 //Creating route for all forceOfWill Cards
 router
-    .route("/")
+    .route("/api")
     .get((req, res) => {
         res.json(forceOfWillCards)
     })
@@ -41,7 +41,7 @@ router
 
 // Creating a route for individual cards
 router
-    .route('/:id')
+    .route('/api/:id')
     .get((req, res, next) => {
         const forceOfWillCard = forceOfWillCards.find((u) => u.id == req.params.id);
         if (forceOfWillCard) res.json(forceOfWillCard);
@@ -68,6 +68,22 @@ router
         });
         if(forceOfWillCard) res.json(forceOfWillCard)
         else next(); 
+});
+
+//---------{VIEW ROUTES}
+router
+    .route('/views')
+    .get((req, res) => {
+    res.render('ForceOfWill', {forceOfWillCards: forceOfWillCards});
+});
+router
+    .route('/views/:id')
+    .get((req, res, next) => {
+  const forceOfWillCard = forceOfWillCards.find((u) => u.id == req.params.id);
+  if (forceOfWillCard) res.render("EachFOW", {
+      forceOfWillCard: forceOfWillCard
+    })
+  else next();
 });
 
 module.exports = router;

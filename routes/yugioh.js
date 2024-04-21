@@ -9,26 +9,20 @@ const imageValidation = (url) => {
 
 //Creating route for all yugioh Cards
 router
-    .route("/")
+    .route("/api")
     .get((req, res) => {
+        console.log(yugiohCards)
         res.json(yugiohCards)
     })
     //how to add new card to the set
     .post((req, res) => {
         if(req.body.name && req.body.type && req.body.subType && req.body.url && req.body.cardGame) {
             //error if someone tries to add a non yugioh card
-            // const cardName = yugiohCards.find((u) => u.cardGame)
-            // console.log(cardName)
-            // if(cardName !== "Yu-Gi-Oh!") {
-            //     res.json({ error: "Trying to add non Yugioh Card"});
-            //     return;
-            // };
             if(req.body.cardGame !== "Yu-Gi-Oh!") {
                 res.json({ error: "Trying to add non Yugioh Card"});
                 return;
             };
             //add error handling for if the url added is an image, just using the url that yugioh images api have to have
-
             if(imageValidation(req.body.url) === false) {
                 res.json({ error: "Trying to add non image URL"});
                 return;
@@ -48,7 +42,7 @@ router
 
 // Creating a route for individual cards
 router
-    .route('/:id')
+    .route('/api/:id')
     .get((req, res, next) => {
         const yugiohCard = yugiohCards.find((u) => u.id == req.params.id);
         if (yugiohCard) res.json(yugiohCard);
@@ -76,5 +70,21 @@ router
         if(yugiohCard) res.json(yugiohCard)
         else next(); 
 });
+
+//---------{VIEW ROUTES}
+router
+    .route('/views')
+    .get((req, res) => {
+    res.render('Yugioh', {yugiohCards: yugiohCards});
+});
+router
+    .get(`/views/:id`, (req, res, next) => {
+        const yugiohCard = yugiohCards.find((u) => u.id == req.params.id);
+        console.log(yugiohCard)
+        if (yugiohCard) res.render("EachYugioh", {
+            yugiohCard: yugiohCard
+          });
+        else next();
+  });
 
 module.exports = router;

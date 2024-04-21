@@ -1,47 +1,37 @@
 /* ----------------------------------------------{ Desktop View} */
 @media (max-width: 3580px) {
     body{
-        background-image: url('https://cdn.ygorganization.com/2023/02/RUSH_CardBack.png');
-        background-repeat:repeat;
+        background-image: url('https://i.redd.it/lq0k1bi3xa241.jpg');
+        background-repeat:no-repeat;
         background-attachment: fixed;
-        background-size:contain;
+        background-size: 100% 100%;
         color: #FFFFFF;
         border: 0;
         margin: 0;
     }
     .cardsIndex{
-        /* width: 90vw; */
-        /* text-align: center; */
         display: grid;
         gap: 20px;
         grid-template-columns: repeat(3, 1fr);
+    }
+    .eachCardsIndex{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .eachGridItemsAll{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        grid-column: 2;
+        grid-row: 1;
     }
 }
 /* -----------------------------------------------------[End Of Desktop] */
 /* ----------------------------------------------{ Mid View - Ipad / Tablet} */
 @media (max-width: 1080px) {
     body{
-        background-image: url('https://cdn.ygorganization.com/2023/02/RUSH_CardBack.png');
-        background-repeat: repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        color: #FFFFFF;
-        border: 0;
-        margin: 0;
-    }
-    .cardsIndex{
-        /* width: 90vw; */
-        /* text-align: center; */
-        display: grid;
-        gap: 20px;
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-/* -----------------------------------------------------[End Of MidView] */
-/* ----------------------------------------------{ Mobile View} */
-@media (max-width: 850px) {
-    body{
-        background-image: url('https://cdn.ygorganization.com/2023/02/RUSH_CardBack.png');
+        background-image: url('https://i.redd.it/lq0k1bi3xa241.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: 100% 100%;
@@ -50,11 +40,51 @@
         margin: 0;
     }
     .cardsIndex{
-        /* width: 90vw; */
-        /* text-align: center; */
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .eachCardsIndex{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .eachGridItemsAll{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        grid-column: 2 / span 3;
+        grid-row: 1;
+    }
+}
+/* -----------------------------------------------------[End Of MidView] */
+/* ----------------------------------------------{ Mobile View} */
+@media (max-width: 850px) {
+    body{
+        background-image: url('https://i.redd.it/lq0k1bi3xa241.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        color: #FFFFFF;
+        border: 0;
+        margin: 0;
+    }
+    .cardsIndex{
         display: grid;
         gap: 20px;
         grid-template-columns: repeat(1, 1fr);
+    }
+    .eachCardsIndex{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .eachGridItemsAll{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        grid-column: 1;
+        grid-row:  1;
     }
 }
 /* -----------------------------------------------------[End Of Mobile] */
@@ -83,5 +113,6 @@ h1{
 }
 .imageItem{
     width:100%;
+    align-self: center;
 }
 

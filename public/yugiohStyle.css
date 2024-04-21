@@ -1,0 +1,118 @@
+/* ----------------------------------------------{ Desktop View} */
+@media (max-width: 3580px) {
+    body{
+        background-image: url('https://cdn.ygorganization.com/2023/02/RUSH_CardBack.png');
+        background-repeat:repeat;
+        background-attachment: fixed;
+        background-size:contain;
+        color: #FFFFFF;
+        border: 0;
+        margin: 0;
+    }
+    .cardsIndex{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .eachCardsIndex{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .eachGridItemsAll{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+/* -----------------------------------------------------[End Of Desktop] */
+/* ----------------------------------------------{ Mid View - Ipad / Tablet} */
+@media (max-width: 1080px) {
+    body{
+        background-image: url('https://cdn.ygorganization.com/2023/02/RUSH_CardBack.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        color: #FFFFFF;
+        border: 0;
+        margin: 0;
+    }
+    .cardsIndex{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .eachCardsIndex{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .eachGridItemsAll{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        grid-column: 2 / span 3;
+        grid-row: 1;
+    }
+}
+/* -----------------------------------------------------[End Of MidView] */
+/* ----------------------------------------------{ Mobile View} */
+@media (max-width: 850px) {
+    body{
+        background-image: url('https://cdn.ygorganization.com/2023/02/RUSH_CardBack.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        color: #FFFFFF;
+        border: 0;
+        margin: 0;
+    }
+    .cardsIndex{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .eachCardsIndex{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .eachGridItemsAll{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        grid-column: 1;
+        grid-row:  1;
+    }
+}
+/* -----------------------------------------------------[End Of Mobile] */
+
+
+h1{
+    text-align: center;
+}
+
+.gridItemsAll{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.gridItemsEach{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 1.45em;
+    height: 10%;
+}
+
+.gridItemLink{
+    color: #00ff0d;
+}
+.imageItem{
+    width:90%;
+    align-self: center;
+}
+

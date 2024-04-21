@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
 
-export default class Yugioh extends Component {
+export default class EachYugioh extends Component {
     render() {
-      const { yugiohCards } = this.props;
-      console.log(yugiohCards);
+      const yugiohCard = this.props.yugiohCard
+      console.log(yugiohCard);
       return (
         <>
         <html>
@@ -12,22 +12,16 @@ export default class Yugioh extends Component {
               <link rel="stylesheet" type="text/css" href="/yugiohStyle.css" />
             </head>
             <body>
-                  <h1>Yugioh Cards Index Page</h1>
+                <h1 class='gridItemLink'>{yugiohCard.name}</h1>
                 <div class='cardContainer'>
-                  <div class='cardsIndex'>
-                    {yugiohCards.map((yugiohCard, i) => {
-                      return (
-                        <div class='gridItemsAll'>
+                  <div class='eachCardsIndex'>
+                        <div class='eachGridItemsAll'>
                           <div class='gridItemsEach'>
-                            <div><a class='gridItemLink' href={`/yugiohCards/views/${yugiohCard.id}`}>{yugiohCard.name}</a></div>
                             <div>{yugiohCard.type}</div>
                             <div>{yugiohCard.subType}</div>
-                            {/* <div>{yugiohCard.cardGame}</div> */}
                           </div>
                           <img class='imageItem' src={yugiohCard.url} alt=""/>
                         </div>
-                      );
-                    })}
                   </div>
                 </div>
             </body>
