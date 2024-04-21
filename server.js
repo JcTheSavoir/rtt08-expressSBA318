@@ -11,10 +11,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ extended: true }));
 
 
-//-----------------{view template engine}
+//-----------------{view template engine (using React)}
+app.set('view engine', 'jsx');
+app.engine('jsx', require('express-react-views').createEngine())
 
-
-    //------------------{express.static}------------------
+    //------------------{express.static middleware}------------------
       //Sets the public directory to be the root directory, gives static files to use 
       //inside of express (We are using it mainly for it's ability to add css into our view section
     app.use(express.static('public'));
@@ -45,22 +46,43 @@ app.use((req, res, next) => {
     }
     next();
 });
-//------------------------{ROUTES}------------------
 
-app.get('/', (req, res) => {
-  res.send('This is the homepage');
+
+
+//----------------------------------------{VIEWS}-------------------
+  //----------------{REQUIRE FOR VIEWS}
+const forceOfWillCards = require("./data/forceOfWill");
+const slayTheSpireCards = require("./data/slayTheSpire");
+const yugiohCards = require("./data/yugioh");
+// //---{HOMEPAGE}
+// app.get('/', (req, res) => {
+//   res.render('Homepage');
+// });
+// //---{FORCEOFWILL}
+// app.get('/fowcards', (req, res) => {
+//   res.render('ForceOfWill', {forceOfWillCards: forceOfWillCards});
+// });
+// //---{SLAYTHESPIRE}
+// app.get('/stscards', (req, res) => {
+//   res.render('SlayTheSpire', {slayTheSpireCards: slayTheSpireCards});
+// });
+//--{YUGIOH} 
+app.get('/yugiohcards', (req, res) => {
+  res.render('Yugioh', {yugiohCards: yugiohCards});
 });
 
-// add route for forceOfWill database
+
+//------------------------------------------{ROUTES}-------------------
+//-------{REQUIRE FOR ROUTES}-----------------
 const forceOfWillRoute = require("./routes/forceOfWill");
-app.use('/api/fowcards', forceOfWillRoute)
-
-// add route for slayTheSpire database
 const slayTheSpireRoute = require("./routes/slayTheSpire");
-app.use('/api/stscards', slayTheSpireRoute)
-
-// add route for yugioh database
 const yugiohRoute = require("./routes/yugioh");
+  //--------------------------------------{api routes}-----------------
+//---{FORCEOFWILL}
+app.use('/api/fowcards', forceOfWillRoute)
+//---{SLAYTHESPIRE}
+app.use('/api/stscards', slayTheSpireRoute)
+//---{YUGIOH}
 app.use('/api/yugiohcards', yugiohRoute)
 
 //Start server and listen on port variable for changes

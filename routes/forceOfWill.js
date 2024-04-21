@@ -22,7 +22,6 @@ router
                 return;
             };
             //add error handling for if the url added is an image
-
             if(imageValidation(req.body.url) === false) {
                 res.json({ error: "Trying to add non image URL"});
                 return;
