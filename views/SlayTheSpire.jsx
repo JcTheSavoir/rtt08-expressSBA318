@@ -22,7 +22,6 @@ export default class YugSlayTheSpire extends Component {
                             <div><a class='gridItemLink' href={`/stscards/views/${slayTheSpireCard.id}`}>{slayTheSpireCard.name}</a></div>
                             <div>{slayTheSpireCard.type}</div>
                             <div>{slayTheSpireCard.subType}</div>
-                            {/* <div>{slayTheSpireCard.cardGame}</div> */}
                           </div>
                           <img class='imageItem' src={slayTheSpireCard.url} alt=""/>
                         </div>

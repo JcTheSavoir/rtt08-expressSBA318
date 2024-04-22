@@ -22,7 +22,6 @@ export default class Yugioh extends Component {
                             <div><a class='gridItemLink' href={`/yugiohCards/views/${yugiohCard.id}`}>{yugiohCard.name}</a></div>
                             <div>{yugiohCard.type}</div>
                             <div>{yugiohCard.subType}</div>
-                            {/* <div>{yugiohCard.cardGame}</div> */}
                           </div>
                           <img class='imageItem' src={yugiohCard.url} alt=""/>
                         </div>

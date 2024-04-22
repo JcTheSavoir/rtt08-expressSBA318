@@ -22,7 +22,6 @@ export default class ForceOfWill extends Component {
                             <div><a class='gridItemLink' href={`/fowcards/views/${forceOfWillCard.id}`}>{forceOfWillCard.name}</a></div>
                             <div>{forceOfWillCard.type}</div>
                             <div>{forceOfWillCard.subType}</div>
-                            {/* <div>{forceOfWillCard.cardGame}</div> */}
                           </div>
                           <img class='imageItem' src={forceOfWillCard.url} alt=""/>
                         </div>

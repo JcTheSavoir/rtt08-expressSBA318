@@ -20,8 +20,6 @@ app.engine('jsx', require('express-react-views').createEngine())
       //inside of express (We are using it mainly for it's ability to add css into our view section
     app.use(express.static('public'));
 
-    //-----------------{error handling Middleware}------------------
-
     //--------------------------------------{Other Middleware}----------
 app.use((req, res, next) => {
     //each time a request is made via the server, a new time will be given
@@ -52,13 +50,40 @@ app.use((req, res, next) => {
 const forceOfWillRoute = require("./routes/forceOfWill");
 const slayTheSpireRoute = require("./routes/slayTheSpire");
 const yugiohRoute = require("./routes/yugioh");
+const homepageRoute = require('./routes/homepage')
     //--------------------------------------{routes}-----------------
+//---{HOMEPAGE}
+app.use('/homepage', homepageRoute);    
 //---{FORCEOFWILL}
-app.use('/fowcards', forceOfWillRoute)
+app.use('/fowcards', forceOfWillRoute);
 //---{SLAYTHESPIRE}
-app.use('/stscards', slayTheSpireRoute)
+app.use('/stscards', slayTheSpireRoute);
 //---{YUGIOH}
-app.use('/yugiohcards', yugiohRoute)
+app.use('/yugiohcards', yugiohRoute);
+
+//-----------------{error handling Middleware}------------------
+app.use((req, res, next) => {
+  const err = new Error('Not a valid url, please refer to api and documentation');
+  err.status = 404;
+  next(err);
+});
+app.use((err, req, res, next) => {
+  const errorStatus = err.status;
+  const errorMessage = errorStatus === 404 ? "Invalid URL" : 'Resource error'
+
+  if (req.path.startsWith('/api/')) {
+    //all api issues
+    res.status(errorStatus).json({
+      status: errorStatus,
+      //err.message refers to the "Message" inside of { const err = new Error('Not a valid url, please refer to api and documentation') }
+      message: err.message || errorMessage
+    });
+  } else {
+    // All non api issues
+    res.status(errorStatus).send(errorMessage)
+  }
+})
+
 
 //Start server and listen on port variable for changes
 app.listen(port, (req, res) => {

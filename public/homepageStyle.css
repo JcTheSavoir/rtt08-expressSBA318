@@ -1,0 +1,32 @@
+body{
+    background-image: url("https://img.freepik.com/premium-vector/apiapplication-programming-interface-concept_387612-433.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    color: #FFFFFF;
+    font-size: 1.1em;
+}
+
+.apiDocumentation{
+    display: flex;
+    flex-direction: column;
+}
+.eachApiName{
+    display: flex;
+    flex-direction: column;
+}
+.linkToApi{
+    color: #119c18;
+}
+
+.viewsDocumentation{
+    display: flex;
+    flex-direction: column;
+}
+.eachViewsName{
+    display: flex;
+    flex-direction: column;
+}
+.linkToViews{
+    color: #119c18;
+}

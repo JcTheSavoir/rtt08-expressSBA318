@@ -7,7 +7,8 @@ const imageValidation = (url) => {
     return pattern.test(url);
 }
 
-//Creating route for all Slay The Spire Cards
+//-------------------------------------------------------[API ROUTES]
+    //Creating route for all Slay The Spire Cards
 router
     .route("/api")
     .get((req, res) => {
@@ -39,7 +40,7 @@ router
         } else res.json({ error: "Insufficient Data" });
 });
 
-// Creating a route for individual cards
+    // Creating a route for individual cards
 router
     .route('/api/:id')
     .get((req, res, next) => {
@@ -70,7 +71,7 @@ router
         else next(); 
 });
 
-//---------{VIEW ROUTES}
+//------------------------------------------------{VIEW ROUTES}-----------------------
 router
     .route('/views')
     .get((req, res) => {
