@@ -12,15 +12,15 @@ export default class EachYugioh extends Component {
               <link rel="stylesheet" type="text/css" href="/yugiohStyle.css" />
             </head>
             <body>
-                <h1 class='gridItemLink'>{yugiohCard.name}</h1>
-                <div class='cardContainer'>
-                  <div class='eachCardsIndex'>
-                        <div class='eachGridItemsAll'>
-                          <div class='gridItemsEach'>
+                <h1 className='gridItemLink'>{yugiohCard.name}</h1>
+                <div className='cardContainer'>
+                  <div className='eachCardsIndex'>
+                        <div className='eachGridItemsAll'>
+                          <div className='gridItemsEach'>
                             <div>{yugiohCard.type}</div>
                             <div>{yugiohCard.subType}</div>
                           </div>
-                          <img class='imageItem' src={yugiohCard.url} alt=""/>
+                          <img className='imageItem' src={yugiohCard.url} alt=""/>
                         </div>
                   </div>
                 </div>

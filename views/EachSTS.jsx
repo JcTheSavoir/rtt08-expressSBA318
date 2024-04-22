@@ -12,15 +12,15 @@ export default class EachSTS extends Component {
               <link rel="stylesheet" type="text/css" href="/slayTheSpireStyle.css" />
             </head>
             <body>
-                <h1 class='gridItemLink'>{slayTheSpireCard.name}</h1>
-                <div class='cardContainer'>
-                  <div class='eachCardsIndex'>
-                        <div class='eachGridItemsAll'>
-                          <div class='gridItemsEach'>
+                <h1 className='gridItemLink'>{slayTheSpireCard.name}</h1>
+                <div className='cardContainer'>
+                  <div className='eachCardsIndex'>
+                        <div className='eachGridItemsAll'>
+                          <div className='gridItemsEach'>
                             <div>{slayTheSpireCard.type}</div>
                             <div>{slayTheSpireCard.subType}</div>
                           </div>
-                          <img class='imageItem' src={slayTheSpireCard.url} alt=""/>
+                          <img className='imageItem' src={slayTheSpireCard.url} alt=""/>
                         </div>
                   </div>
                 </div>

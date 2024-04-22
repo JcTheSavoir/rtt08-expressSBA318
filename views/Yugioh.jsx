@@ -13,17 +13,17 @@ export default class Yugioh extends Component {
             </head>
             <body>
                   <h1>Yugioh Cards Index Page</h1>
-                <div class='cardContainer'>
-                  <div class='cardsIndex'>
+                <div className='cardContainer'>
+                  <div className='cardsIndex'>
                     {yugiohCards.map((yugiohCard, i) => {
                       return (
-                        <div class='gridItemsAll'>
-                          <div class='gridItemsEach'>
-                            <div><a class='gridItemLink' href={`/yugiohCards/views/${yugiohCard.id}`}>{yugiohCard.name}</a></div>
+                        <div className='gridItemsAll'>
+                          <div className='gridItemsEach'>
+                            <div><a className='gridItemLink' href={`/yugiohCards/views/${yugiohCard.id}`}>{yugiohCard.name}</a></div>
                             <div>{yugiohCard.type}</div>
                             <div>{yugiohCard.subType}</div>
                           </div>
-                          <img class='imageItem' src={yugiohCard.url} alt=""/>
+                          <img className='imageItem' src={yugiohCard.url} alt=""/>
                         </div>
                       );
                     })}

@@ -7,25 +7,25 @@ export default class EachFOW extends Component {
       console.log(forceOfWillCard);
       return (
         <>
-        <html>
-            <head>
-              <link rel="stylesheet" type="text/css" href="/forceOfWillStyle.css" />
-            </head>
-            <body>
-                <h1 class='gridItemLink'>{forceOfWillCard.name}</h1>
-                <div class='cardContainer'>
-                  <div class='eachCardsIndex'>
-                        <div class='eachGridItemsAll'>
-                          <div class='gridItemsEach'>
-                            <div>{forceOfWillCard.type}</div>
-                            <div>{forceOfWillCard.subType}</div>
+          <html>
+              <head>
+                <link rel="stylesheet" type="text/css" href="/forceOfWillStyle.css" />
+              </head>
+              <body>
+                  <h1 className='gridItemLink'>{forceOfWillCard.name}</h1>
+                  <div className='cardContainer'>
+                    <div className='eachCardsIndex'>
+                          <div className='eachGridItemsAll'>
+                            <div className='gridItemsEach'>
+                              <div>{forceOfWillCard.type}</div>
+                              <div>{forceOfWillCard.subType}</div>
+                            </div>
+                            <img className='imageItem' src={forceOfWillCard.url} alt=""/>
                           </div>
-                          <img class='imageItem' src={forceOfWillCard.url} alt=""/>
-                        </div>
+                    </div>
                   </div>
-                </div>
-            </body>
-        </html>
+              </body>
+          </html>
         </>
       );
     }
