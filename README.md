@@ -14,9 +14,9 @@ This project is used to measures a learners understanding of Node and Express, a
 * Interact with a self-made API through HTML forms.
 
 //-----------------------------Main Requirements and Weights-----------------//
-* Create and use at least two pieces of custom middleware.
+* /Create and use at least two pieces of custom middleware.
  --- Weight: 5%
-* Create and use error-handling middleware.
+* /Create and use error-handling middleware.
  --- Weight: 5%
 * /Use at least three different data categories (e.g., users, posts, or comments). !!
  --- Weight: 5%
@@ -34,10 +34,10 @@ This project is used to measures a learners understanding of Node and Express, a
  --- Weight: 5%
 * /Adhere to the guiding principles of REST.
  --- Weight: 10%
-* Create and render at least one view using a view template and template engine. This can be a custom template engine or a third-party engine.
+* /Create and render at least one view using a view template and template engine. This can be a custom template engine or a third-party engine.
 Note: If you are stuck on how to approach this, think about ways you could render the current state of your API's data for easy viewing.
  --- Weight: 8%
-* Use simple CSS to style the rendered views.
+* /Use simple CSS to style the rendered views.
 Note: This is not a test of design; it is a test of serving static files using Express. The CSS can be
 very simple.
  --- Weight: 2%
